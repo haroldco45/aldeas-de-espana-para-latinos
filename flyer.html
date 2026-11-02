@@ -55,6 +55,7 @@ const c=document.getElementById("c"),x=c.getContext("2d");
 function cargar(k){
   const p=FOTOS[k].p, nom=p.split("/").pop();
   const intentos=[
+    ["fotos/"+k+".jpg",true],
     ["https://upload.wikimedia.org/wikipedia/commons/thumb/"+p+"/1280px-"+nom,true],
     ["https://upload.wikimedia.org/wikipedia/commons/"+p,true],
     ["https://commons.wikimedia.org/wiki/Special:FilePath/"+nom+"?width=1280",false]

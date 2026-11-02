@@ -1,5 +1,5 @@
 // Aldeas de España para Latinos — Vibras Positivas HM
-const CACHE = "aldeas-v2";
+const CACHE = "aldeas-v3";
 const BASE = ["./", "index.html", "manifest.json", "icon-192.png", "icon-512.png"];
 
 self.addEventListener("install", e => {

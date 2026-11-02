@@ -393,7 +393,7 @@ const F = {
 };
 const img = (k,w=1400)=>"https://commons.wikimedia.org/wiki/Special:FilePath/"+encodeURIComponent(F[k].replace(/ /g,"_"))+"?width="+w;
 const pagina = k=>"https://commons.wikimedia.org/wiki/File:"+encodeURIComponent(F[k].replace(/ /g,"_"));
-function ponerFoto(el,k,w){ if(!el||!F[k]) return; el.style.backgroundImage="url('"+img(k,w)+"'), linear-gradient(135deg,#2e5a3f,#6b8f4e)"; }
+function ponerFoto(el,k,w){ if(!el||!F[k]) return; el.style.backgroundImage="url('fotos/"+k+".jpg'), url('"+img(k,w)+"'), linear-gradient(135deg,#2e5a3f,#6b8f4e)"; }
 
 /* ---------- IDIOMA ---------- */
 let L = "es";

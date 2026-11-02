@@ -1,0 +1,51 @@
+name: Traer fotos reales
+
+on:
+  push:
+    paths: [".github/workflows/fotos.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fotos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar fotos de Wikimedia Commons
+        run: |
+          mkdir -p fotos
+          UA="AldeasDeEspanaParaLatinos/1.0 (https://github.com/haroldco45/aldeas-de-espana-para-latinos)"
+          while IFS='|' read -r clave archivo; do
+            [ -z "$clave" ] && continue
+            url="https://commons.wikimedia.org/wiki/Special:FilePath/${archivo}?width=1280"
+            for i in 1 2 3; do
+              if curl -fsSL -A "$UA" -o "fotos/${clave}.jpg" "$url"; then echo "ok $clave"; break; fi
+              echo "reintento $clave"; sleep 5
+            done
+            sleep 2
+          done <<'LISTA'
+          somiedo|Lagos_de_Saliencia_en_el_Parque_Natural_de_Somiedo_Asturias.jpg
+          somiedo2|Ruta_del_Castro_Parque_Natural_de_Somiedo_Asturias.jpg
+          toro|Toro_en_la_ruta_Lagos_de_Saliencia_Parque_Natural_de_Somiedo_Asturias.jpg
+          arenillas|Arenillas,_Soria,_Espa%C3%B1a,_2017-05-26,_DD_13.jpg
+          carmona|P8080228.JPG
+          acevro|O_Acevro.jpg
+          horreo|Horreo-Gonzar-Galicia-2010.jpg
+          fuentona|La_Fuentona,_Muriel_de_la_Fuente,_Soria,_Espa%C3%B1a,_2021-08-28,_DD_42.jpg
+          queso|Queso_roncal.jpg
+          horno|Italica_Horno_panadero.jpg
+          selgas|Selgas,_Pravia,_Asturias_(7595818996).jpg
+          boal|Villanueva_boal.jpg
+          argonos|Argonos.jpg
+          albarracin|Albarrac%C3%ADn,_Teruel,_Espa%C3%B1a,_2014-01-10,_DD_051.JPG
+          LISTA
+          ls -la fotos
+      - name: Guardar en el repositorio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add fotos
+          git diff --cached --quiet || git commit -m "Fotos reales de las aldeas (Wikimedia Commons)"
+          git push
