@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aldeas de España para Latinos — vivir, trabajar y emprender en los pueblos</title>
+<meta name="description" content="Guía bilingüe para latinos que quieren empezar de cero en una aldea de España: programas que dan casa y trabajo, oficios que faltan, papeles y apps por oficio de Vibras Positivas HM.">
+<meta name="theme-color" content="#1f3d2b">
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aldeas de España para Latinos">
+<meta property="og:description" content="Pueblos que buscan familias, oficios que faltan y apps para cada oficio. Español e inglés.">
+<meta property="og:url" content="https://aldeas-de-espana-para-latinos.netlify.app/">
+<meta property="og:image" content="https://haroldco45.github.io/aldeas-de-espana-para-latinos/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aldeas de España para Latinos">
+<meta name="twitter:description" content="Pueblos que buscan familias, oficios que faltan y apps para cada oficio. Español e inglés.">
+<meta name="twitter:image" content="https://haroldco45.github.io/aldeas-de-espana-para-latinos/og.jpg">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --verde:#1f3d2b; --verde2:#2e5a3f; --musgo:#6b8f4e; --piedra:#efe9df; --crema:#faf7f2;
+  --teja:#c4572e; --teja2:#e0733f; --oro:#e8b54a; --tinta:#16201a; --gris:#5d6b62;
+  --radio:18px; --sombra:0 10px 30px rgba(22,32,26,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Barlow,system-ui,sans-serif;background:var(--crema);color:var(--tinta);line-height:1.5;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+h1,h2,h3{font-family:"Barlow Condensed",Barlow,sans-serif;letter-spacing:.2px;line-height:1.05}
+h2{font-size:clamp(30px,5vw,46px);color:var(--verde)}
+.kicker{display:inline-block;font-weight:800;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--teja)}
+.lead{font-size:18px;color:var(--gris);max-width:760px;margin-top:10px}
+section{padding:70px 0}
+.foto{background:#c9d3c4 linear-gradient(135deg,#2e5a3f,#6b8f4e);background-size:cover;background-position:center}
+
+/* barra superior */
+.top{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 16px;background:rgba(31,61,43,.82);backdrop-filter:blur(10px);color:#fff;transition:background .3s}
+.top .marca{font-family:"Barlow Condensed";font-weight:800;font-size:20px;letter-spacing:.5px;text-decoration:none}
+.top .marca b{color:var(--oro)}
+.top nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.top nav::-webkit-scrollbar{display:none}
+.top nav a{white-space:nowrap;text-decoration:none;font-weight:600;font-size:14px;padding:7px 11px;border-radius:999px;opacity:.85}
+.top nav a:hover,.top nav a.on{background:rgba(255,255,255,.16);opacity:1}
+.lang{display:flex;border:1.5px solid rgba(255,255,255,.5);border-radius:999px;overflow:hidden;flex-shrink:0}
+.lang button{background:none;border:0;color:#fff;font:700 13px Barlow;padding:6px 11px;cursor:pointer}
+.lang button.on{background:#fff;color:var(--verde)}
+@media(max-width:860px){.top nav{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;padding:0}
+.slides{position:absolute;inset:0}
+.slide{position:absolute;inset:-4%;opacity:0;transition:opacity 1.6s ease;background-size:cover;background-position:center}
+.slide.on{opacity:1;animation:kb 9s ease-out forwards}
+@keyframes kb{from{transform:scale(1.02) translate(0,0)}to{transform:scale(1.12) translate(-1.5%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,20,14,.25) 0%,rgba(10,20,14,.15) 35%,rgba(10,20,14,.88) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:46px;padding-top:110px;width:100%}
+.hero h1{font-size:clamp(46px,10vw,104px);text-transform:uppercase;font-weight:800}
+.hero h1 span{color:var(--oro);display:block;font-size:.5em;letter-spacing:3px}
+.hero p{font-size:clamp(17px,2.4vw,22px);max-width:640px;margin:14px 0 22px;opacity:.95}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:16px;padding:14px 22px;border-radius:999px;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.btn.teja{background:var(--teja);color:#fff}
+.btn.claro{background:rgba(255,255,255,.14);color:#fff;border:1.5px solid rgba(255,255,255,.6)}
+.btn.verde{background:var(--verde);color:#fff}
+.pie-foto{position:absolute;right:14px;bottom:12px;z-index:3;font-size:11px;opacity:.75;color:#fff;text-decoration:none;max-width:60%}
+.puntos{display:flex;gap:6px;margin-top:26px}
+.puntos i{width:28px;height:4px;border-radius:4px;background:rgba(255,255,255,.35);cursor:pointer;transition:background .3s,width .3s}
+.puntos i.on{background:var(--oro);width:48px}
+
+/* relojes y cifras */
+.franja{background:var(--verde);color:#fff;padding:0}
+.franja .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.franja .c{padding:22px 14px;border-right:1px solid rgba(255,255,255,.12)}
+.franja .c:last-child{border:0}
+.franja b{display:block;font:800 clamp(28px,4vw,40px) "Barlow Condensed";color:var(--oro)}
+.franja small{opacity:.85;font-size:14px}
+@media(max-width:760px){.franja .wrap{grid-template-columns:1fr 1fr}.franja .c:nth-child(2){border-right:0}}
+
+/* ticker */
+.ticker{background:var(--teja);color:#fff;overflow:hidden;white-space:nowrap;font-weight:700;padding:10px 0}
+.ticker div{display:inline-block;animation:tk 50s linear infinite;padding-left:100%}
+.ticker span{margin-right:48px}
+@keyframes tk{to{transform:translateX(-100%)}}
+
+/* historia */
+.historia{display:grid;grid-template-columns:1.05fr 1fr;gap:34px;align-items:center}
+.historia .img{border-radius:var(--radio);min-height:420px;box-shadow:var(--sombra);position:relative;overflow:hidden}
+.historia .img span{position:absolute;left:14px;bottom:14px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;padding:5px 10px;border-radius:8px}
+.cita{border-left:5px solid var(--teja);padding:4px 0 4px 18px;margin:18px 0;font-size:19px;font-weight:600;color:var(--verde)}
+.datos{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.datos div{background:#fff;border-radius:14px;padding:14px;box-shadow:0 3px 12px rgba(0,0,0,.06)}
+.datos b{font:800 26px "Barlow Condensed";color:var(--teja);display:block}
+.datos small{color:var(--gris);font-size:13px}
+@media(max-width:860px){.historia{grid-template-columns:1fr}.historia .img{min-height:280px}}
+
+/* tarjetas programas */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin-top:30px}
+.card{background:#fff;border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra);display:flex;flex-direction:column;transition:transform .25s}
+.card:hover{transform:translateY(-4px)}
+.card .foto{height:180px;position:relative}
+.card .foto em{position:absolute;top:12px;left:12px;font-style:normal;background:var(--oro);color:var(--tinta);font-weight:800;font-size:12px;padding:4px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.5px}
+.card .in{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:25px;color:var(--verde)}
+.card p{color:#33413a;font-size:15.5px}
+.card ul{padding-left:18px;font-size:15px;color:#33413a}
+.card .estado{margin-top:auto;font-size:13px;font-weight:700;color:var(--teja)}
+.card a.mas{font-weight:800;color:var(--verde);text-decoration:none;font-size:15px}
+.card a.mas:hover{text-decoration:underline}
+
+/* oficios -> apps */
+.oscuro{background:var(--verde);color:#fff}
+.oscuro h2{color:#fff}
+.oscuro .lead{color:rgba(255,255,255,.82)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chip{border:1.5px solid rgba(255,255,255,.4);background:transparent;color:#fff;font:700 15px Barlow;padding:9px 16px;border-radius:999px;cursor:pointer;transition:all .2s}
+.chip:hover{border-color:#fff}
+.chip.on{background:var(--oro);border-color:var(--oro);color:var(--tinta)}
+.panel{display:grid;grid-template-columns:1fr 1.15fr;gap:0;margin-top:22px;background:#fff;color:var(--tinta);border-radius:var(--radio);overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.3);min-height:430px}
+.panel .foto{min-height:300px;position:relative;transition:background-image .4s}
+.panel .foto span{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 14px;background:linear-gradient(transparent,rgba(0,0,0,.75));color:#fff;font:800 32px "Barlow Condensed"}
+.panel .info{padding:24px 24px 26px;display:flex;flex-direction:column;gap:12px;animation:entra .45s ease}
+@keyframes entra{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.panel .prob{background:var(--piedra);border-radius:12px;padding:12px 14px;font-size:15px}
+.panel .prob b{color:var(--teja)}
+.panel h3{font-size:28px;color:var(--verde)}
+.panel .funcs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.panel .funcs div{border:1.5px solid #e4ded3;border-radius:10px;padding:9px 11px;font-size:14px;font-weight:600}
+.panel .ya{font-size:14px;color:var(--gris)}
+.panel .ya b{color:var(--verde)}
+@media(max-width:860px){.panel{grid-template-columns:1fr}.panel .funcs{grid-template-columns:1fr}}
+
+/* tabla resumen */
+.tabla{width:100%;border-collapse:collapse;margin-top:26px;background:#fff;border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra);font-size:15px}
+.tabla th{background:var(--teja);color:#fff;text-align:left;padding:12px;font-family:"Barlow Condensed";font-size:18px;letter-spacing:.3px}
+.tabla td{padding:11px 12px;border-bottom:1px solid #eee;vertical-align:top}
+.tabla tr:hover td{background:#fbf6ee}
+.scroll-x{overflow-x:auto}
+
+/* papeles */
+.pasos{counter-reset:p;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:26px}
+.paso{background:#fff;border-radius:16px;padding:18px 18px 18px 64px;position:relative;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.paso::before{counter-increment:p;content:counter(p);position:absolute;left:16px;top:16px;width:36px;height:36px;border-radius:50%;background:var(--verde);color:#fff;font:800 19px "Barlow Condensed";display:grid;place-items:center}
+.paso h3{font-size:21px;color:var(--verde);margin-bottom:4px}
+.paso p{font-size:15px;color:#33413a}
+.aviso{margin-top:20px;background:#fff4e5;border:1.5px solid var(--oro);border-radius:14px;padding:14px 16px;font-size:15px}
+
+/* pueblos */
+.pueblos{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:220px;gap:12px;margin-top:28px}
+.pueblo{position:relative;border-radius:16px;overflow:hidden;cursor:pointer;color:#fff}
+.pueblo .foto{position:absolute;inset:0;transition:transform .8s}
+.pueblo:hover .foto{transform:scale(1.07)}
+.pueblo .t{position:absolute;inset:auto 0 0 0;padding:40px 14px 14px;background:linear-gradient(transparent,rgba(0,0,0,.82))}
+.pueblo h3{font-size:26px}
+.pueblo p{font-size:14px;opacity:.92}
+.pueblo:nth-child(1){grid-column:span 3;grid-row:span 2}
+.pueblo:nth-child(2){grid-column:span 3}
+.pueblo:nth-child(3){grid-column:span 3}
+.pueblo:nth-child(4),.pueblo:nth-child(5),.pueblo:nth-child(6){grid-column:span 2}
+@media(max-width:760px){.pueblos{grid-template-columns:1fr;grid-auto-rows:230px}.pueblo:nth-child(n){grid-column:auto;grid-row:auto}}
+
+/* checklist */
+.check{display:grid;gap:10px;margin-top:24px;max-width:820px}
+.check label{display:flex;gap:12px;align-items:flex-start;background:#fff;border-radius:12px;padding:13px 15px;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.05);font-size:16px}
+.check input{width:22px;height:22px;accent-color:var(--teja);flex-shrink:0;margin-top:1px}
+.check label.ok{opacity:.6;text-decoration:line-through}
+.barra{height:12px;background:#e4ded3;border-radius:99px;overflow:hidden;margin-top:18px;max-width:820px}
+.barra i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--musgo),var(--teja));transition:width .5s}
+
+/* videos */
+.vids{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-top:24px}
+.vid{position:relative;border-radius:16px;overflow:hidden;min-height:170px;color:#fff;text-decoration:none;display:flex;align-items:flex-end}
+.vid .foto{position:absolute;inset:0}
+.vid::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 30%,rgba(0,0,0,.8))}
+.vid b{position:relative;z-index:2;padding:14px;font:800 21px "Barlow Condensed"}
+.vid{cursor:pointer;aspect-ratio:16/9;min-height:0}
+.vid.abierto{cursor:default;flex-direction:column;align-items:stretch;background:#000}
+.vid.abierto::after{display:none}
+.vid iframe{width:100%;flex:1;border:0}
+.vid .yt{position:relative;z-index:2;background:var(--tinta);color:var(--oro);font-weight:700;font-size:13px;padding:6px 10px;text-decoration:none}
+.vid .play{position:absolute;z-index:2;top:14px;right:14px;background:var(--teja);font:800 12px Barlow;padding:5px 10px;border-radius:999px;letter-spacing:1px}
+
+/* serie */
+.serie{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.serie a{text-decoration:none;background:#fff;border:1.5px solid #e4ded3;border-radius:999px;padding:10px 16px;font-weight:700;transition:all .2s}
+.serie a:hover{background:var(--verde);color:#fff;border-color:var(--verde)}
+.serie a.port{background:var(--teja);color:#fff;border-color:var(--teja)}
+
+footer{background:var(--tinta);color:rgba(255,255,255,.8);padding:40px 0 90px;font-size:14px}
+footer h3{color:#fff;font-size:22px;margin-bottom:8px}
+footer a{color:var(--oro)}
+footer ol{padding-left:18px;display:grid;gap:4px;margin:10px 0 20px}
+.copy{border-top:1px solid rgba(255,255,255,.15);padding-top:16px;margin-top:10px;font-weight:600;color:#fff}
+
+.wa{position:fixed;right:16px;bottom:16px;z-index:60;background:#1f8f4e;color:#fff;font-weight:800;text-decoration:none;padding:14px 20px;border-radius:999px;box-shadow:0 10px 26px rgba(0,0,0,.3);animation:late 2.4s infinite}
+@keyframes late{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+.instalar{position:fixed;left:16px;bottom:16px;z-index:60;display:none}
+.rev{opacity:0;transform:translateY(26px);transition:all .7s ease}
+.rev.vis{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header class="top" id="top">
+  <a href="#inicio" class="marca">ALDEAS <b>DE ESPAÑA</b></a>
+  <nav id="menu">
+    <a href="#historia" data-k="nav1">La historia</a>
+    <a href="#programas" data-k="nav2">Programas</a>
+    <a href="#apps" data-k="nav3">Apps por oficio</a>
+    <a href="#papeles" data-k="nav4">Papeles</a>
+    <a href="#pueblos" data-k="nav5">Pueblos</a>
+    <a href="#plan" data-k="nav6">Mi plan</a>
+  </nav>
+  <div class="lang"><button id="bES" class="on">ES</button><button id="bEN">EN</button></div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="slides" id="slides"></div>
+  <div class="wrap">
+    <h1><span data-k="hKick">Para latinos que quieren empezar de cero</span>Aldeas de España</h1>
+    <p data-k="hSub">Pueblos que buscan familias, oficios que hacen falta, los papeles para quedarte y una app para cada oficio. Todo en un solo lugar.</p>
+    <div class="btns">
+      <a class="btn teja" href="#apps" data-k="hBtn1">Ver apps por oficio</a>
+      <a class="btn claro" href="#programas" data-k="hBtn2">Pueblos que dan casa y trabajo</a>
+    </div>
+    <div class="puntos" id="puntos"></div>
+  </div>
+  <a class="pie-foto" id="pieFoto" target="_blank" rel="noopener"></a>
+</section>
+
+<div class="franja">
+  <div class="wrap">
+    <div class="c"><b id="hEsp">--:--</b><small data-k="fr1">Hora en España (Madrid)</small></div>
+    <div class="c"><b id="hCol">--:--</b><small data-k="fr2">Hora en Colombia (Bogotá)</small></div>
+    <div class="c"><b class="cuenta" data-n="3000" data-p="+">0</b><small data-k="fr3">personas llevadas al campo por Proyecto Arraigo</small></div>
+    <div class="c"><b class="cuenta" data-n="30">0</b><small data-k="fr4">proyectos que impulsa Holapueblo en su VI edición</small></div>
+  </div>
+</div>
+
+<div class="ticker"><div id="ticker"></div></div>
+
+<!-- HISTORIA -->
+<section id="historia">
+  <div class="wrap historia rev">
+    <div class="img foto" data-foto="somiedo2"><span data-k="hiPie">Montañas de Asturias — Somiedo</span></div>
+    <div>
+      <span class="kicker" data-k="hiKick">La historia que lo empezó todo</span>
+      <h2 data-k="hiT">Un argentino, una aldea en Asturias y un palacio del siglo XV</h2>
+      <p class="lead" data-k="hiP1">Axel Conenna (@acsel.tv) es argentino. Llegó a una aldea apartada de las montañas de Asturias buscando paz y naturaleza. Al día siguiente de llegar consiguió casa por 150 euros al mes, con huerto, dos habitaciones y un estudio.</p>
+      <div class="cita" data-k="hiCita">Trabaja en remoto en marketing digital y video, y abrió un palacio del siglo XV para enseñar a otros a convertir su experiencia en una marca propia.</div>
+      <p data-k="hiP2">Su caso demuestra lo que esta app quiere mostrar: en la aldea no solo se vive tranquilo. También se puede trabajar desde el computador, ofrecer un servicio y montar un negocio. Y cada negocio necesita sus herramientas.</p>
+      <div class="datos">
+        <div><b>150 €</b><small data-k="hiD1">alquiler al mes de su casa</small></div>
+        <div><b>S. XV</b><small data-k="hiD2">el palacio donde da formación</small></div>
+        <div><b>10</b><small data-k="hiD3">personas caben en sus habitaciones</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMAS -->
+<section id="programas" style="background:var(--piedra)">
+  <div class="wrap">
+    <div class="rev">
+      <span class="kicker" data-k="prKick">Puertas de entrada</span>
+      <h2 data-k="prT">Programas que conectan familias con pueblos</h2>
+      <p class="lead" data-k="prP">Estos son los caminos reales que existen hoy. Ninguno regala el viaje: hay que llegar con algo de ahorro y con ganas de quedarse.</p>
+    </div>
+    <div class="grid" id="gridProgramas"></div>
+  </div>
+</section>
+
+<!-- APPS POR OFICIO -->
+<section id="apps" class="oscuro">
+  <div class="wrap">
+    <div class="rev">
+      <span class="kicker" style="color:var(--oro)" data-k="apKick">Vibras Positivas HM en las aldeas</span>
+      <h2 data-k="apT">Una app para cada oficio de la aldea</h2>
+      <p class="lead" data-k="apP">Lo que ya hacemos en Colombia para tenderos, apicultores, ganaderos y contratistas sirve igual en un pueblo de España. Escoge un oficio y mira qué problema tiene, qué app lo resuelve y dónde ya la probamos.</p>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div class="panel" id="panel"></div>
+  </div>
+</section>
+
+<section style="padding-top:50px">
+  <div class="wrap rev">
+    <span class="kicker" data-k="tbKick">Resumen para mostrar a un alcalde</span>
+    <h2 data-k="tbT">Lo que hacemos y dónde encaja en la aldea</h2>
+    <div class="scroll-x"><table class="tabla" id="tabla"></table></div>
+    <div class="aviso" data-k="tbAviso">Cómo llegar a los pueblos: a través de los ayuntamientos, las asociaciones culturales y los grupos de acción local (LEADER) de cada comarca, que financian proyectos de dinamización. Una sola app para el pueblo (bandos, casas libres, bienvenida a nuevos vecinos) abre la puerta a vender las de cada negocio.</div>
+  </div>
+</section>
+
+<!-- PAPELES -->
+<section id="papeles" style="background:var(--piedra)">
+  <div class="wrap">
+    <div class="rev">
+      <span class="kicker" data-k="paKick">Papeles</span>
+      <h2 data-k="paT">Cómo quedarse legal en España</h2>
+      <p class="lead" data-k="paP">El Reglamento de Extranjería que rige desde el 20 de mayo de 2025 tiene cinco tipos de arraigo: social, sociolaboral, socioformativo, familiar y de segunda oportunidad.</p>
+    </div>
+    <div class="pasos" id="pasos"></div>
+    <div class="aviso" data-k="paAviso">Esto es información general, no asesoría legal. Cada caso es distinto y las normas cambian. Antes de viajar, consulta a un abogado de extranjería o la Oficina de Extranjería de la provincia.</div>
+  </div>
+</section>
+
+<!-- PUEBLOS -->
+<section id="pueblos">
+  <div class="wrap">
+    <div class="rev">
+      <span class="kicker" data-k="puKick">Para mirar en el mapa</span>
+      <h2 data-k="puT">Pueblos y comarcas que vale la pena conocer</h2>
+      <p class="lead" data-k="puP">Toca cada foto para abrirla en el mapa.</p>
+    </div>
+    <div class="pueblos" id="gridPueblos"></div>
+  </div>
+</section>
+
+<!-- PLAN -->
+<section id="plan" style="background:var(--piedra)">
+  <div class="wrap">
+    <div class="rev">
+      <span class="kicker" data-k="plKick">Mi plan</span>
+      <h2 data-k="plT">Paso a paso para mudarte a una aldea</h2>
+      <p class="lead" data-k="plP">Marca lo que ya hiciste. Tu avance queda guardado en este teléfono.</p>
+    </div>
+    <div class="barra"><i id="barra"></i></div>
+    <p id="avance" style="margin-top:8px;font-weight:700;color:var(--verde)"></p>
+    <div class="check" id="check"></div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos">
+  <div class="wrap">
+    <div class="rev">
+      <span class="kicker" data-k="viKick">Videos</span>
+      <h2 data-k="viT">Míralo con tus propios ojos</h2>
+      <p class="lead" data-k="viP">Historias reales de familias que se fueron a vivir al pueblo y de las aldeas de Asturias. Toca un video para verlo aquí mismo.</p>
+    </div>
+    <div class="vids" id="vids"></div>
+  </div>
+</section>
+
+<!-- SERIE -->
+<section style="background:var(--piedra);padding:50px 0">
+  <div class="wrap">
+    <span class="kicker" data-k="seKick">Serie para Latinos</span>
+    <h2 data-k="seT">Otras ciudades de la serie</h2>
+    <div class="serie" id="serie"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h3 data-k="foT">Fuentes</h3>
+    <ol id="fuentes"></ol>
+    <p data-k="foFotos">Fotos: Wikimedia Commons, con licencias Creative Commons. Toca el crédito de cada foto para ver su autor y su licencia.</p>
+    <p style="margin-top:6px" data-k="foAct">Información revisada el 2 de noviembre de 2026 (hora de Colombia).</p>
+    <p class="copy">Desarrollada por Vibras Positivas HM — Derechos de Autor Reservados · Caucasia, Antioquia</p>
+  </div>
+</footer>
+
+<a class="wa" id="wa" target="_blank" rel="noopener" data-k="waBtn">Quiero una app para mi pueblo</a>
+<button class="btn verde instalar" id="instalar" data-k="instalar">Instalar app</button>
+
+<script>
+/* ---------- FOTOS REALES (Wikimedia Commons) ---------- */
+const F = {
+  arenillas:"Arenillas, Soria, España, 2017-05-26, DD 13.jpg",
+  somiedo:"Lagos de Saliencia en el Parque Natural de Somiedo Asturias.jpg",
+  somiedo2:"Ruta del Castro Parque Natural de Somiedo Asturias.jpg",
+  toro:"Toro en la ruta Lagos de Saliencia Parque Natural de Somiedo Asturias.jpg",
+  carmona:"P8080228.JPG",
+  acevro:"O Acevro.jpg",
+  horreo:"Horreo-Gonzar-Galicia-2010.jpg",
+  fuentona:"La Fuentona, Muriel de la Fuente, Soria, España, 2021-08-28, DD 42.jpg",
+  queso:"Queso roncal.jpg",
+  horno:"Italica Horno panadero.jpg",
+  selgas:"Selgas, Pravia, Asturias (7595818996).jpg",
+  boal:"Villanueva boal.jpg",
+  argonos:"Argonos.jpg",
+  albarracin:"Albarracín, Teruel, España, 2014-01-10, DD 051.JPG"
+};
+const img = (k,w=1400)=>"https://commons.wikimedia.org/wiki/Special:FilePath/"+encodeURIComponent(F[k].replace(/ /g,"_"))+"?width="+w;
+const pagina = k=>"https://commons.wikimedia.org/wiki/File:"+encodeURIComponent(F[k].replace(/ /g,"_"));
+function ponerFoto(el,k,w){ if(!el||!F[k]) return; el.style.backgroundImage="url('"+img(k,w)+"'), linear-gradient(135deg,#2e5a3f,#6b8f4e)"; }
+
+/* ---------- IDIOMA ---------- */
+let L = "es";
+try{ L = localStorage.getItem("aldeas_lang") || "es"; }catch(e){}
+const t = o => (o && typeof o==="object") ? (o[L]||o.es) : o;
+
+const T = {
+ nav1:{en:"The story"},nav2:{en:"Programs"},nav3:{en:"Apps by trade"},nav4:{en:"Papers"},nav5:{en:"Villages"},nav6:{en:"My plan"},
+ hKick:{en:"For Latinos ready to start from scratch"},
+ hSub:{en:"Villages looking for families, trades they need, the papers to stay, and an app for every trade. All in one place."},
+ hBtn1:{en:"See apps by trade"},hBtn2:{en:"Villages offering home and work"},
+ fr1:{en:"Time in Spain (Madrid)"},fr2:{en:"Time in Colombia (Bogotá)"},fr3:{en:"people moved to the countryside by Proyecto Arraigo"},fr4:{en:"projects backed by Holapueblo's 6th edition"},
+ hiPie:{en:"Asturias mountains — Somiedo"},hiKick:{en:"The story that started it"},
+ hiT:{en:"An Argentine, a village in Asturias and a 15th-century palace"},
+ hiP1:{en:"Axel Conenna (@acsel.tv) is from Argentina. He moved to a remote village in the mountains of Asturias looking for peace and nature. The day after arriving he found a house for 150 euros a month, with a vegetable garden, two bedrooms and a studio."},
+ hiCita:{en:"He works remotely in digital marketing and video, and opened a 15th-century palace to teach others to turn their experience into their own brand."},
+ hiP2:{en:"His case shows what this app is about: village life is not only quiet. You can work from a laptop, offer a service and start a business. And every business needs its tools."},
+ hiD1:{en:"monthly rent for his house"},hiD2:{en:"the palace where he teaches"},hiD3:{en:"guests fit in its rooms"},
+ prKick:{en:"Ways in"},prT:{en:"Programs that connect families with villages"},
+ prP:{en:"These are real paths that exist today. None pays for your trip: you need some savings and a real wish to stay."},
+ apKick:{en:"Vibras Positivas HM in the villages"},apT:{en:"An app for every village trade"},
+ apP:{en:"What we already build in Colombia for shopkeepers, beekeepers, ranchers and contractors works just as well in a Spanish village. Pick a trade and see its problem, the app that solves it and where we already tried it."},
+ tbKick:{en:"Summary to show a mayor"},tbT:{en:"What we build and where it fits in the village"},
+ tbAviso:{en:"How to reach the villages: through town halls (ayuntamientos), cultural associations and each district's local action groups (LEADER), which fund revitalization projects. One app for the whole village (notices, empty houses, welcome for new neighbors) opens the door to selling one for every business."},
+ paKick:{en:"Papers"},paT:{en:"How to stay legally in Spain"},
+ paP:{en:"The Immigration Regulation in force since 20 May 2025 has five types of 'arraigo' (settlement permit): social, social-labor, social-training, family and second chance."},
+ paAviso:{en:"This is general information, not legal advice. Every case is different and rules change. Before you travel, consult an immigration lawyer or the province's Immigration Office."},
+ puKick:{en:"Worth a look on the map"},puT:{en:"Villages and districts worth knowing"},puP:{en:"Tap any photo to open it on the map."},
+ plKick:{en:"My plan"},plT:{en:"Step by step to move to a village"},plP:{en:"Tick what you've done. Your progress is saved on this phone."},
+ viKick:{en:"Videos"},viT:{en:"See it with your own eyes"},viP:{en:"Real stories of families who moved to a village, and the villages of Asturias. Tap a video to watch it right here."},
+ seKick:{en:"Latinos series"},seT:{en:"Other cities in the series"},
+ foT:{en:"Sources"},foFotos:{en:"Photos: Wikimedia Commons, under Creative Commons licenses. Tap each photo credit to see its author and license."},
+ foAct:{en:"Information checked on 2 November 2026 (Colombia time)."},
+ waBtn:{en:"I want an app for my village"},instalar:{en:"Install app"}
+};
+const base = {};
+document.querySelectorAll("[data-k]").forEach(el=>{ base[el.dataset.k]=el.innerHTML; });
+function textos(){
+  document.documentElement.lang=L;
+  document.querySelectorAll("[data-k]").forEach(el=>{
+    const k=el.dataset.k; el.innerHTML = (L==="en" && T[k] && T[k].en) ? T[k].en : base[k];
+  });
+  document.getElementById("bES").classList.toggle("on",L==="es");
+  document.getElementById("bEN").classList.toggle("on",L==="en");
+  pintarTodo();
+}
+function cambiar(l){ L=l; try{localStorage.setItem("aldeas_lang",l)}catch(e){} textos(); }
+document.getElementById("bES").onclick=()=>cambiar("es");
+document.getElementById("bEN").onclick=()=>cambiar("en");
+
+/* ---------- HERO ---------- */
+const HERO = [
+  {k:"somiedo", c:{es:"Lagos de Saliencia, Somiedo (Asturias)",en:"Saliencia lakes, Somiedo (Asturias)"}},
+  {k:"arenillas", c:{es:"Arenillas (Soria): 40 vecinos que buscan familias",en:"Arenillas (Soria): 40 neighbors looking for families"}},
+  {k:"carmona", c:{es:"Carmona, Cabuérniga (Cantabria)",en:"Carmona, Cabuérniga (Cantabria)"}},
+  {k:"acevro", c:{es:"O Acevro, A Pontenova (Lugo, Galicia)",en:"O Acevro, A Pontenova (Lugo, Galicia)"}},
+  {k:"selgas", c:{es:"Selgas, Pravia (Asturias)",en:"Selgas, Pravia (Asturias)"}}
+];
+let hi=0;
+const sl=document.getElementById("slides"), pu=document.getElementById("puntos"), pie=document.getElementById("pieFoto");
+HERO.forEach((h,i)=>{
+  const d=document.createElement("div"); d.className="slide"; ponerFoto(d,h.k,1800); sl.appendChild(d);
+  const p=document.createElement("i"); p.onclick=()=>verSlide(i); pu.appendChild(p);
+});
+function verSlide(i){
+  hi=i; [...sl.children].forEach((s,j)=>s.classList.toggle("on",j===i)); [...pu.children].forEach((s,j)=>s.classList.toggle("on",j===i));
+  pie.textContent=(L==="en"?"Photo: ":"Foto: ")+t(HERO[i].c)+" · Wikimedia Commons"; pie.href=pagina(HERO[i].k);
+}
+setInterval(()=>verSlide((hi+1)%HERO.length),7000);
+
+/* ---------- RELOJES (hora real) ---------- */
+function reloj(){
+  const o={hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:false};
+  document.getElementById("hEsp").textContent=new Date().toLocaleTimeString("es-ES",{...o,timeZone:"Europe/Madrid"});
+  document.getElementById("hCol").textContent=new Date().toLocaleTimeString("es-CO",{...o,timeZone:"America/Bogota"});
+}
+reloj(); setInterval(reloj,1000);
+
+/* ---------- DATOS ---------- */
+const TICKER = [
+ {es:"Arenillas (Soria) ofreció casa rehabilitada, trabajo de albañil y el bar social a una familia",en:"Arenillas (Soria) offered a restored house, a builder's job and the village bar to one family"},
+ {es:"Holapueblo: el plazo de su VI edición estuvo abierto hasta junio de 2026",en:"Holapueblo: its 6th edition was open until June 2026"},
+ {es:"Asturias: el Banco de Tierras llevó una familia de 6 a Allande alquilando 4,7 hectáreas",en:"Asturias: the Land Bank brought a family of 6 to Allande by renting 4.7 hectares"},
+ {es:"Arraigo: ahora se piden 2 años en España, antes eran 3",en:"Arraigo: now 2 years in Spain are required, it used to be 3"},
+ {es:"Galicia: 21 aldeas modelo recuperan tierras abandonadas",en:"Galicia: 21 model villages bring abandoned land back to use"}
+];
+
+const PROG = [
+ {k:"arenillas", tag:{es:"Casa + trabajo",en:"Home + job"}, n:"Arenillas (Soria)",
+  p:{es:"Pueblo de unos 40 vecinos. El ayuntamiento y la asociación cultural rehabilitaron siete casas.",en:"A village of about 40 people. The town hall and the cultural association restored seven houses."},
+  li:{es:["Casa sin alquiler","Trabajo fijo de albañil para edificios municipales","Opción de llevar el bar social","Prioridad a familias con hijos en edad escolar"],en:["Rent-free house","Steady builder's job on municipal buildings","Option to run the village bar","Priority for families with school-age children"]},
+  e:{es:"La convocatoria ya cerró: escogieron una familia en abril de 2026. Sirve de ejemplo de lo que ofrecen otros pueblos.",en:"The call is closed: a family was chosen in April 2026. It shows what other villages offer."},
+  u:"https://www.primerahora.com/noticias/mundo/notas/pueblo-de-espana-ofrece-casa-gratis-y-trabajo-a-quien-quiera-mudarse/"},
+ {k:"fuentona", tag:{es:"Emprender",en:"Start a business"}, n:"Holapueblo",
+  p:{es:"Plataforma de AlmaNatura, Redeia e IKEA que une emprendedores con pueblos de menos de 5.000 habitantes.",en:"Platform by AlmaNatura, Redeia and IKEA that matches entrepreneurs with villages under 5,000 people."},
+  li:{es:["Asesoría para la idea de negocio y para escoger el pueblo","Pueblos de Asturias, Cantabria, Galicia, Castilla y otras regiones","La VI edición impulsa 30 proyectos"],en:["Advice on your business idea and choosing the village","Villages in Asturias, Cantabria, Galicia, Castile and more","The 6th edition backs 30 projects"]},
+  e:{es:"La inscripción de 2026 cerró en junio. Regístrate en su web para la próxima edición.",en:"2026 sign-up closed in June. Register on their site for the next edition."},
+  u:"https://holapueblo.com/inscribete/emprendedores/"},
+ {k:"carmona", tag:{es:"Acompañamiento",en:"Guidance"}, n:"Proyecto Arraigo",
+  p:{es:"Empresa social que trabaja en más de 600 pueblos y ya acompañó a más de 3.000 personas a vivir al campo.",en:"Social enterprise working in 600+ villages that has helped 3,000+ people move to the countryside."},
+  li:{es:["Busca casa y trabajo en el pueblo","Ofertas en agricultura, ganadería, hostelería, construcción, salud y residencias","Relevo de comercios y bares que se quedan sin dueño"],en:["Finds housing and work in the village","Jobs in farming, livestock, hospitality, construction, health and care homes","Taking over shops and bars with retiring owners"]},
+  e:{es:"No da dinero: hay que tener ahorros para la mudanza.",en:"No money given: you need savings for the move."},
+  u:"https://proyectoarraigo.es/"},
+ {k:"horreo", tag:{es:"Tierras",en:"Land"}, n:{es:"Aldeas Modelo (Galicia)",en:"Model Villages (Galicia)"},
+  p:{es:"La Xunta, por medio de AGADER, recupera las tierras abandonadas alrededor de las aldeas para producir.",en:"The Galician government, through AGADER, brings abandoned land around villages back into production."},
+  li:{es:["21 aldeas modelo declaradas","574 hectáreas movilizadas","Ayudas para mejorar servicios básicos"],en:["21 model villages declared","574 hectares in use again","Grants to improve basic services"]},
+  e:{es:"Pensado para proyectos agrícolas y ganaderos.",en:"Aimed at farming and livestock projects."},
+  u:"https://agader.xunta.gal/es/recuperacion-de-tierras/aldeas-modelo"},
+ {k:"toro", tag:{es:"Campo",en:"Farming"}, n:{es:"Banco de Tierras de Asturias",en:"Asturias Land Bank"},
+  p:{es:"Conecta dueños de fincas con nuevos pobladores. En octubre de 2026 llevó una familia de seis, con cuatro niños, a Allande.",en:"Connects landowners with newcomers. In October 2026 it brought a family of six, with four children, to Allande."},
+  li:{es:["Alquiler de fincas para producir","Ayudas a la sucesión de explotaciones","Programa Incorpórate al agro"],en:["Farmland for rent","Grants to take over existing farms","'Incorpórate al agro' program"]},
+  e:{es:"Asturias también da ayudas a emigrantes retornados y a sus descendientes.",en:"Asturias also helps returning emigrants and their descendants."},
+  u:"https://www.agronewscastillayleon.com/banco-tierras-asturias-familia-allande-arrendamiento"},
+ {k:"argonos", tag:{es:"Cantabria",en:"Cantabria"}, n:{es:"Nuevos agricultores en Cantabria",en:"New farmers in Cantabria"},
+  p:{es:"Cantabria convocó para 2026 ayudas para que jóvenes y nuevos agricultores se instalen. Queda junto a Asturias y a Santander.",en:"Cantabria opened 2026 grants for young and new farmers to settle. It borders Asturias and is home to Santander."},
+  li:{es:["Ayudas al establecimiento de jóvenes agricultores","Ayudas a nuevos agricultores","Red Cántabra de Desarrollo Rural"],en:["Settlement grants for young farmers","Grants for new farmers","Cantabrian Rural Development Network"]},
+  e:{es:"Revisa la convocatoria del año en el Boletín Oficial de Cantabria.",en:"Check each year's call in the Official Bulletin of Cantabria."},
+  u:"https://redpac.es/en/node/13924"}
+];
+
+/* Oficios -> apps de Vibras Positivas HM */
+const OF = [
+ {id:"bar", k:"selgas", n:{es:"Bar social y tienda",en:"Village bar & shop"},
+  prob:{es:"En muchos pueblos el bar es el único punto de encuentro, y la tienda vende fiado a los mayores en un cuaderno.",en:"In many villages the bar is the only meeting point, and the shop gives elderly neighbors credit written in a notebook."},
+  app:"Tendero POS + Fiado",
+  f:{es:["Caja y ventas del día","Fiado digital por vecino","Inventario y aviso de faltantes","Cierre diario en un toque"],en:["Till and daily sales","Digital credit per neighbor","Stock and low-stock alerts","One-tap daily close"]},
+  ya:{es:"Ya funciona con tenderos del Bajo Cauca: Tendero POS, Fiado y Cierre Diario.",en:"Already used by shopkeepers in Bajo Cauca: Tendero POS, Fiado and Cierre Diario."}},
+ {id:"pan", k:"horno", n:{es:"Panadería y reparto",en:"Bakery & delivery"},
+  prob:{es:"La furgoneta del pan recorre varias aldeas y los pedidos llegan por llamada o se pierden.",en:"The bread van covers several villages and orders come by phone or get lost."},
+  app:{es:"Pedidos + Ruta de reparto",en:"Orders + Delivery route"},
+  f:{es:["Pedido por WhatsApp desde el menú","Ruta por aldea y día","Lista de lo que hay que hornear","Cobro y saldo por cliente"],en:["Order via WhatsApp from the menu","Route by village and day","Baking list for the night","Payment and balance per customer"]},
+  ya:{es:"Basado en el menú con pedidos que usamos para restaurantes y en los portales de vendedores de Distrileco.",en:"Based on our ordering menu for restaurants and Distrileco's sales-rep portals."}},
+ {id:"queso", k:"queso", n:{es:"Quesería, miel y embutidos",en:"Cheese, honey & cured meats"},
+  prob:{es:"Hacen un producto de calidad pero solo lo venden en la feria del pueblo o a los turistas del verano.",en:"They make a quality product but only sell it at the village fair or to summer tourists."},
+  app:{es:"App de venta con fotos y videos",en:"Sales app with photos and videos"},
+  f:{es:["Catálogo con fotos reales","Pedidos y envíos a toda España","Historia del productor","Código para revendedores"],en:["Catalog with real photos","Orders and shipping across Spain","The maker's story","Code for resellers"]},
+  ya:{es:"Ya la hicimos para Apigold y MielesJJ (miel de Remedios) y para Kamo Café de Ituango.",en:"Already built for Apigold and MielesJJ (honey from Remedios) and Kamo Café from Ituango."}},
+ {id:"ganado", k:"toro", n:{es:"Ganadería",en:"Livestock"},
+  prob:{es:"El relevo generacional exige llevar registros de partos, vacunas, pastos y alimento, y casi todo está en papel.",en:"Taking over a farm means records of births, vaccines, pastures and feed, and almost all of it is on paper."},
+  app:{es:"Registro ganadero",en:"Herd records"},
+  f:{es:["Ficha de cada animal","Calendario de vacunas y partos","Rotación de pastos","Cuánto alimento por kilo ganado"],en:["Record for each animal","Vaccine and calving calendar","Pasture rotation","Feed per kilo gained"]},
+  ya:{es:"Basado en la Escuela de Mayordomía y en la app de Conversión del Cerdo.",en:"Based on our Escuela de Mayordomía and Pig Feed Conversion apps."}},
+ {id:"campo", k:"fuentona", n:{es:"Huerta y fincas",en:"Market gardens & farmland"},
+  prob:{es:"Los pequeños productores no llegan solos a los mercados de la ciudad y venden barato a intermediarios.",en:"Small growers can't reach city markets on their own and sell cheap to middlemen."},
+  app:{es:"Tienda de productores",en:"Growers' shop"},
+  f:{es:["Varios productores en una tienda","Cestas semanales","Pedidos de restaurantes","Cosechas y existencias"],en:["Several growers in one shop","Weekly boxes","Restaurant orders","Harvests and stock"]},
+  ya:{es:"Basado en la Tienda de las Parcelas de Paraguay (Caucasia) y en Arándano Pro.",en:"Based on our Paraguay Plots Shop (Caucasia) and Arándano Pro."}},
+ {id:"turismo", k:"albarracin", n:{es:"Casa rural y turismo",en:"Rural stays & tourism"},
+  prob:{es:"Dependen de las comisiones de las grandes plataformas y nadie cuenta qué hay que ver en el pueblo.",en:"They depend on big booking platforms' fees and nobody tells visitors what to see in the village."},
+  app:{es:"Reservas + Guía del pueblo",en:"Bookings + Village guide"},
+  f:{es:["Reservas y calendario propio","Rutas, miradores y fiestas","Recomendaciones de negocios locales","Español e inglés"],en:["Own bookings and calendar","Trails, viewpoints and festivals","Local business tips","Spanish and English"]},
+  ya:{es:"Basado en la app de citas, en Corredor Floral KM 18 y en la propuesta turística de Caucasia.",en:"Based on our booking app, Corredor Floral KM 18 and the Caucasia tourism proposal."}},
+ {id:"formador", k:"somiedo2", n:{es:"Formador, como Axel",en:"Trainer, like Axel"},
+  prob:{es:"Quien enseña desde la aldea necesita vender cursos, recibir alumnos y llevar a cada uno paso a paso.",en:"Anyone teaching from a village needs to sell courses, host students and guide each one step by step."},
+  app:{es:"Escuela en una app",en:"School in an app"},
+  f:{es:["Módulos y lecciones","Progreso de cada alumno","Reservas de estancias","Pagos y certificados"],en:["Modules and lessons","Each student's progress","Stay bookings","Payments and certificates"]},
+  ya:{es:"Basado en Ruta del Inversor, Electricidad básica y la Escuela de Mayordomía.",en:"Based on Ruta del Inversor, Electricidad básica and Escuela de Mayordomía."}},
+ {id:"obra", k:"arenillas", n:{es:"Albañil y mantenimiento",en:"Builder & maintenance"},
+  prob:{es:"El albañil del pueblo rehabilita casas y edificios del ayuntamiento y tiene que justificar cada trabajo.",en:"The village builder restores houses and town hall buildings and must account for every job."},
+  app:"Bitácora de Obra Pro",
+  f:{es:["Diario de obra con fotos","Materiales y horas","Avance por casa o edificio","Informe para el ayuntamiento"],en:["Site diary with photos","Materials and hours","Progress per house or building","Report for the town hall"]},
+  ya:{es:"Ya la hicimos para un contratista del colector del barrio Kennedy, en Caucasia.",en:"Already built for a contractor on the Kennedy sewer project in Caucasia."}},
+ {id:"ayto", k:"carmona", n:{es:"Ayuntamiento y vecinos",en:"Town hall & neighbors"},
+  prob:{es:"El pueblo quiere atraer familias pero no tiene cómo mostrar las casas libres, los trabajos ni sus avisos.",en:"The village wants families but has no way to show empty houses, jobs or its notices."},
+  app:{es:"App del pueblo",en:"Village app"},
+  f:{es:["Casas y trabajos disponibles","Bandos y avisos","Bienvenida a nuevos vecinos","Fiestas, rifas y eventos"],en:["Available houses and jobs","Notices and alerts","Welcome for new neighbors","Festivals, raffles and events"]},
+  ya:{es:"Basado en Células Ciudadanas, ExpoCaucasia y la rifa de la Natillera El Retiro.",en:"Based on Células Ciudadanas, ExpoCaucasia and the Natillera El Retiro raffle."}},
+ {id:"mayores", k:"boal", n:{es:"Cuidado de mayores",en:"Elderly care"},
+  prob:{es:"La mitad del pueblo es mayor; cuidadores y familias lejanas no saben quién visitó a quién ni qué medicina toca.",en:"Half the village is elderly; carers and faraway families don't know who visited whom or which medicine is due."},
+  app:{es:"Bitácora de cuidados",en:"Care log"},
+  f:{es:["Visitas y turnos de cuidadores","Recordatorio de citas","Avisos a la familia","Registro de cada visita"],en:["Carer visits and shifts","Appointment reminders","Updates for the family","Log of every visit"]},
+  ya:{es:"App nueva: la armamos con la base de la app de citas y de las bitácoras.",en:"New app: built on our booking app and log apps."}}
+];
+
+const PASOS = [
+ {h:{es:"Pasaporte y visado",en:"Passport and visa"},p:{es:"Los colombianos entran a España sin visado como turistas hasta 90 días. Para quedarse a vivir hace falta un permiso.",en:"Colombians enter Spain visa-free as tourists for up to 90 days. To live there you need a permit."}},
+ {h:{es:"Arraigo sociolaboral",en:"Social-labor arraigo"},p:{es:"Dos años en España y uno o varios contratos que sumen al menos 20 horas por semana, con al menos el salario mínimo o el del convenio.",en:"Two years in Spain and one or more contracts adding up to at least 20 hours a week, paying at least minimum wage or the sector rate."}},
+ {h:{es:"Arraigo socioformativo",en:"Social-training arraigo"},p:{es:"Dos años en España y matrícula en una formación válida. Permite trabajar mientras estudias.",en:"Two years in Spain and enrollment in a valid training course. You can work while you study."}},
+ {h:{es:"Arraigo social y familiar",en:"Social and family arraigo"},p:{es:"El social pide dos años y vínculos familiares o un informe de integración. El familiar no exige tiempo previo.",en:"Social requires two years plus family ties or an integration report. Family arraigo requires no prior time."}},
+ {h:{es:"Nacionalidad",en:"Citizenship"},p:{es:"Los nacionales de países iberoamericanos pueden pedir la nacionalidad española tras dos años de residencia legal.",en:"Nationals of Ibero-American countries can apply for Spanish citizenship after two years of legal residence."}},
+ {h:{es:"Raíces españolas",en:"Spanish roots"},p:{es:"Si tienes abuelos asturianos, gallegos o de otra región, revisa las ayudas para emigrantes retornados y sus descendientes.",en:"If you have grandparents from Asturias, Galicia or elsewhere, check grants for returning emigrants and their descendants."}}
+];
+
+const PUEBLOS = [
+ {k:"somiedo",n:"Somiedo",r:{es:"Asturias · brañas y lagos",en:"Asturias · mountain pastures and lakes"},q:"Somiedo, Asturias"},
+ {k:"carmona",n:"Carmona",r:{es:"Cantabria · cerca de Santander",en:"Cantabria · near Santander"},q:"Carmona, Cabuérniga, Cantabria"},
+ {k:"arenillas",n:"Arenillas",r:{es:"Soria · 40 vecinos",en:"Soria · 40 neighbors"},q:"Arenillas, Soria"},
+ {k:"acevro",n:"A Pontenova",r:{es:"Lugo · Galicia rural",en:"Lugo · rural Galicia"},q:"A Pontenova, Lugo"},
+ {k:"boal",n:"Boal",r:{es:"Occidente de Asturias",en:"Western Asturias"},q:"Boal, Asturias"},
+ {k:"selgas",n:"Pravia",r:{es:"Asturias · cerca del mar",en:"Asturias · near the sea"},q:"Selgas, Pravia, Asturias"}
+];
+
+const CHECK = [
+ {es:"Decidir qué oficio o negocio voy a llevar",en:"Decide which trade or business I'll bring"},
+ {es:"Ahorrar para viaje, mudanza y los primeros meses",en:"Save for travel, moving and the first months"},
+ {es:"Registrarme en Holapueblo y en Proyecto Arraigo",en:"Sign up with Holapueblo and Proyecto Arraigo"},
+ {es:"Escoger 3 comarcas y hablar con sus ayuntamientos",en:"Pick 3 districts and talk to their town halls"},
+ {es:"Consultar a un abogado de extranjería",en:"Consult an immigration lawyer"},
+ {es:"Homologar títulos y preparar el certificado de antecedentes",en:"Get degrees recognized and prepare a police record certificate"},
+ {es:"Visitar el pueblo antes de mudarme",en:"Visit the village before moving"},
+ {es:"Empadronarme en el pueblo al llegar",en:"Register at the town hall when I arrive"},
+ {es:"Montar la app de mi negocio",en:"Set up my business app"}
+];
+
+const VIDS = [
+ {id:"_ZJvgPyKLtw",n:{es:"Una nueva familia de Proyecto Arraigo llega a Caleruega",en:"A new Proyecto Arraigo family arrives in Caleruega"}},
+ {id:"vaQjWTMIe_U",n:{es:"Nuevos vecinos en pueblos de Soria con Proyecto Arraigo",en:"New neighbors in Soria villages with Proyecto Arraigo"}},
+ {id:"72dTvxbO26Y",n:{es:"Nuevos pobladores de Bolea (Huesca) con Holapueblo",en:"Newcomers in Bolea (Huesca) with Holapueblo"}},
+ {id:"6fVDaB_CDQ8",n:{es:"Holapueblo: nuevos habitantes y negocios en 19 pueblos",en:"Holapueblo: new residents and businesses in 19 villages"}},
+ {id:"vs08bN5dFuk",n:{es:"Así son las brañas de Somiedo, Asturias",en:"The mountain pastures of Somiedo, Asturias"}},
+ {id:"g-xQFcUgueY",n:{es:"Brañas de Saliencia, Somiedo",en:"Saliencia pastures, Somiedo"}}
+];
+
+const SERIE = [
+ ["latinos-por-el-mundo",{es:"Portada: Latinos por el mundo",en:"Home: Latinos around the world"},1],
+ ["londres-para-latinos","Londres"],["madrid-para-latinos","Madrid"],["bilbao-para-latinos","Bilbao"],["toledo-para-latinos","Toledo"],["getxo-para-latinos","Getxo"],
+ ["medellin-para-latinos","Medellín"],["miami-para-latinos","Miami"],["nueva-york-para-latinos","Nueva York"],["leamington-para-latinos","Leamington"],
+ ["willemstad-para-latinos","Willemstad"],["cartagena-para-latinos","Cartagena"],["norcasia-para-latinos","Norcasia"]
+];
+
+const FUENTES = [
+ ["El Español — Axel vive en un pueblo y paga 150 euros de alquiler (jul 2026)","https://www.elespanol.com/sociedad/20260704/axel-vive-pueblo-habitantes-pago-euros-alquiler-habitaciones-huerto/1003744309592_0.amp.html"],
+ ["Primera Hora — Arenillas ofrece casa gratis y trabajo","https://www.primerahora.com/noticias/mundo/notas/pueblo-de-espana-ofrece-casa-gratis-y-trabajo-a-quien-quiera-mudarse/"],
+ ["Redeia — VI edición de Holapueblo (mar 2026)","https://www.redeia.com/sites/default/files/paragraph/2026/03/file/La%20nueva%20edici%C3%B3n%20de%20Holapueblo%20recibe%20un%20r%C3%A9cord%20de%20inscripciones%20de%20municipios%20en%20riesgo%20de%20despoblaci%C3%B3n.pdf"],
+ ["Trabajar por el mundo — Proyecto Arraigo","https://trabajarporelmundo.org/?p=69253"],
+ ["Xunta de Galicia — Aldeas modelo","https://www.xunta.gal/es/notas-de-prensa/-/nova/77614/xunta-destaca-rios-potencial-las-ayudas-proyectos-creacion-mejora-ampliacion"],
+ ["Agronews — Banco de Tierras de Asturias en Allande (oct 2026)","https://www.agronewscastillayleon.com/banco-tierras-asturias-familia-allande-arrendamiento"],
+ ["RedPAC — Ayudas a jóvenes y nuevos agricultores en Cantabria 2026","https://redpac.es/en/node/13924"],
+ ["CostaLuz Lawyers — Tipos de arraigo 2026","https://www.costaluzlawyers.com/arraigo-social-vs-arraigo-laboral-2026-diferencias/"],
+ ["Veritas — Reglamento de Extranjería vigente en 2026","https://veritasgestion.com/?p=6071"]
+];
+
+/* ---------- PINTAR ---------- */
+let ofSel = "bar";
+function pintarTodo(){
+  document.getElementById("ticker").innerHTML = [...TICKER,...TICKER].map(x=>"<span>"+t(x)+"</span>").join("");
+  verSlide(hi);
+
+  document.getElementById("gridProgramas").innerHTML = PROG.map(p=>`
+   <article class="card rev"><div class="foto" data-foto="${p.k}"><em>${t(p.tag)}</em></div>
+    <div class="in"><h3>${t(p.n)}</h3><p>${t(p.p)}</p><ul>${t(p.li).map(x=>"<li>"+x+"</li>").join("")}</ul>
+    <p class="estado">${t(p.e)}</p><a class="mas" href="${p.u}" target="_blank" rel="noopener">${L==="en"?"Learn more":"Ver más"}</a></div></article>`).join("");
+
+  document.getElementById("chips").innerHTML = OF.map(o=>`<button class="chip ${o.id===ofSel?"on":""}" data-id="${o.id}">${t(o.n)}</button>`).join("");
+  document.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{ofSel=b.dataset.id;pintarTodo();});
+  pintarPanel();
+
+  document.getElementById("tabla").innerHTML = `<tr><th>${L==="en"?"Trade":"Oficio"}</th><th>${L==="en"?"Problem":"Problema"}</th><th>App</th><th>${L==="en"?"Proven in":"Ya probada en"}</th></tr>`+
+    OF.map(o=>`<tr><td><b>${t(o.n)}</b></td><td>${t(o.prob)}</td><td>${t(o.app)}</td><td>${t(o.ya)}</td></tr>`).join("");
+
+  document.getElementById("pasos").innerHTML = PASOS.map(p=>`<div class="paso rev"><h3>${t(p.h)}</h3><p>${t(p.p)}</p></div>`).join("");
+
+  document.getElementById("gridPueblos").innerHTML = PUEBLOS.map(p=>`
+    <a class="pueblo rev" href="https://www.google.com/maps/search/${encodeURIComponent(p.q)}" target="_blank" rel="noopener">
+     <div class="foto" data-foto="${p.k}"></div><div class="t"><h3>${p.n}</h3><p>${t(p.r)}</p></div></a>`).join("");
+
+  pintarCheck();
+
+  document.getElementById("vids").innerHTML = VIDS.map(v=>`
+    <div class="vid rev" data-id="${v.id}" role="button" tabindex="0">
+     <div class="foto" style="background-image:url('https://i.ytimg.com/vi/${v.id}/hqdefault.jpg'),linear-gradient(135deg,#2e5a3f,#6b8f4e)"></div>
+     <span class="play">${L==="en"?"PLAY":"VER VIDEO"}</span><b>${t(v.n)}</b></div>`).join("");
+  document.querySelectorAll(".vid").forEach(el=>{
+    const abrir=()=>{ el.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${el.dataset.id}?autoplay=1&rel=0" title="video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe><a class="yt" href="https://www.youtube.com/watch?v=${el.dataset.id}" target="_blank" rel="noopener">${L==="en"?"Open on YouTube":"Abrir en YouTube"}</a>`; el.classList.add("abierto"); };
+    el.onclick=abrir; el.onkeydown=e=>{ if(e.key==="Enter") abrir(); };
+  });
+
+  document.getElementById("serie").innerHTML = SERIE.map(s=>`<a class="${s[2]?"port":""}" href="https://haroldco45.github.io/${s[0]}/" target="_blank" rel="noopener">${t(s[1])}</a>`).join("");
+
+  document.getElementById("fuentes").innerHTML = FUENTES.map(f=>`<li><a href="${f[1]}" target="_blank" rel="noopener">${f[0]}</a></li>`).join("");
+
+  const msg = L==="en" ? "Hi Harold, I saw Aldeas de España para Latinos and I want an app for my village or business." : "Hola Harold, vi Aldeas de España para Latinos y quiero una app para mi pueblo o negocio.";
+  document.getElementById("wa").href = "https://wa.me/573117700431?text="+encodeURIComponent(msg);
+
+  document.querySelectorAll("[data-foto]").forEach(el=>ponerFoto(el,el.dataset.foto,900));
+  observar();
+}
+
+function pintarPanel(){
+  const o = OF.find(x=>x.id===ofSel);
+  const msg = (L==="en"?"Hi Harold, I'm interested in the app for: ":"Hola Harold, me interesa la app para: ")+t(o.n)+" ("+t(o.app)+")";
+  document.getElementById("panel").innerHTML = `
+    <div class="foto" data-foto="${o.k}"><span>${t(o.n)}</span></div>
+    <div class="info">
+      <div class="prob"><b>${L==="en"?"The problem: ":"El problema: "}</b>${t(o.prob)}</div>
+      <span class="kicker">${L==="en"?"The app":"La app"}</span>
+      <h3>${t(o.app)}</h3>
+      <div class="funcs">${t(o.f).map(x=>"<div>"+x+"</div>").join("")}</div>
+      <p class="ya"><b>${L==="en"?"Where we tried it: ":"Dónde ya la probamos: "}</b>${t(o.ya)}</p>
+      <div class="btns"><a class="btn teja" target="_blank" rel="noopener" href="https://wa.me/573117700431?text=${encodeURIComponent(msg)}">${L==="en"?"Ask for a demo":"Pedir demo"}</a></div>
+    </div>`;
+}
+
+function pintarCheck(){
+  let hechos=[]; try{hechos=JSON.parse(localStorage.getItem("aldeas_plan")||"[]")}catch(e){}
+  const c=document.getElementById("check");
+  c.innerHTML = CHECK.map((x,i)=>`<label class="${hechos.includes(i)?"ok":""}"><input type="checkbox" data-i="${i}" ${hechos.includes(i)?"checked":""}><span>${t(x)}</span></label>`).join("");
+  c.querySelectorAll("input").forEach(inp=>inp.onchange=()=>{
+    const i=+inp.dataset.i; hechos = inp.checked ? [...new Set([...hechos,i])] : hechos.filter(h=>h!==i);
+    try{localStorage.setItem("aldeas_plan",JSON.stringify(hechos))}catch(e){}
+    pintarCheck();
+  });
+  const pct=Math.round(hechos.length/CHECK.length*100);
+  document.getElementById("barra").style.width=pct+"%";
+  document.getElementById("avance").textContent=(L==="en"?"Progress: ":"Avance: ")+pct+"% ("+hechos.length+"/"+CHECK.length+")";
+}
+
+/* ---------- ANIMACIONES ---------- */
+let io;
+function observar(){
+  if(!("IntersectionObserver" in window)){document.querySelectorAll(".rev").forEach(e=>e.classList.add("vis"));return;}
+  io = io || new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){e.target.classList.add("vis"); io.unobserve(e.target);} }),{threshold:.12});
+  document.querySelectorAll(".rev:not(.vis)").forEach(e=>io.observe(e));
+}
+const cuentas=document.querySelectorAll(".cuenta");
+const ioC = "IntersectionObserver" in window ? new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting) return; const el=e.target, n=+el.dataset.n, p=el.dataset.p||""; let s=null;
+  const paso=ts=>{ s=s||ts; const k=Math.min((ts-s)/1600,1); el.textContent=p+Math.round(n*(1-Math.pow(1-k,3))).toLocaleString("es-ES"); if(k<1) requestAnimationFrame(paso); };
+  requestAnimationFrame(paso); ioC.unobserve(el);
+}),{threshold:.5}) : null;
+cuentas.forEach(c=> ioC ? ioC.observe(c) : (c.textContent=(c.dataset.p||"")+c.dataset.n));
+
+/* menú activo */
+const secs=["historia","programas","apps","papeles","pueblos","plan"];
+window.addEventListener("scroll",()=>{
+  let act=""; secs.forEach(s=>{const el=document.getElementById(s); if(el && el.getBoundingClientRect().top<120) act=s;});
+  document.querySelectorAll("#menu a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+act));
+},{passive:true});
+
+/* ---------- PWA ---------- */
+let evInst=null;
+window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();evInst=e;document.getElementById("instalar").style.display="inline-flex";});
+document.getElementById("instalar").onclick=async()=>{ if(!evInst) return; evInst.prompt(); await evInst.userChoice; evInst=null; document.getElementById("instalar").style.display="none"; };
+if("serviceWorker" in navigator){ window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{})); }
+
+textos();
+verSlide(0);
+</script>
+</body>
+</html>
